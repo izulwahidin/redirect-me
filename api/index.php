@@ -1,12 +1,11 @@
 <?php
 $redirs = [
   "ID" => "https://shope.ee/7f1epV4n1Q",
-  "US" => "https://yahoo.com",
+  "US" => "https://www.usa.gov/",
+  "SG" => "https://www.gov.sg",
   "dafault" => "https://www.highcpmrevenuenetwork.com/z9zmjzbzb?key=e6e74edb6e795c057a05cd8630b1afcd",
 ];
 $srv = (object) $_SERVER;
-
-var_dump($srv->HTTP_X_VERCEL_IP_COUNTRY);die();
 
 // Redirect to matched country
 foreach (@$redirs ?? [] as $country => $url){
