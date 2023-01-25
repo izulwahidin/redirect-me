@@ -6,6 +6,8 @@ $redirs = [
 ];
 $srv = (object) $_SERVER;
 
+var_dump($srv->HTTP_X_VERCEL_IP_COUNTRY);
+
 // Redirect to matched country
 foreach (@$redirs ?? [] as $country => $url){
   $rx = "/$country/i";
