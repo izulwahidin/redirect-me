@@ -9,7 +9,7 @@ $srv = (object) $_SERVER;
 
 // Redirect to matched country
 foreach (@$redirs ?? [] as $country => $url){
-  $rx = "/$c/i";
+  $rx = "/$country/i";
   if (strcasecmp($country, $srv->HTTP_X_VERCEL_IP_COUNTRY) === false) header("Location: ". $url);
 }
 
